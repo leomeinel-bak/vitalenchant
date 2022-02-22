@@ -16,39 +16,39 @@
  * along with this program. If not, see https://github.com/TamrielNetwork/VitalEnchant/blob/main/LICENSE
  */
 
-package com.tamrielnetwork.vitalcraft;
+package com.tamrielnetwork.vitalenchant;
 
-import com.tamrielnetwork.vitalcraft.commands.VitalCraftCmd;
-import com.tamrielnetwork.vitalcraft.files.Messages;
+import com.tamrielnetwork.vitalenchant.commands.VitalEnchantCmd;
+import com.tamrielnetwork.vitalenchant.files.Messages;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Objects;
 
-public final class VitalCraft extends JavaPlugin {
+public final class VitalEnchant extends JavaPlugin {
 
 	private Messages messages;
 
 	@Override
 	public void onEnable() {
 
-		Objects.requireNonNull(getCommand("vitalcraft")).setExecutor(new VitalCraftCmd());
+		Objects.requireNonNull(getCommand("vitalenchant")).setExecutor(new VitalEnchantCmd());
 
 		saveDefaultConfig();
 
 		messages = new Messages();
 
-		Bukkit.getLogger().info("VitalCraft v" + this.getDescription().getVersion() + " enabled");
+		Bukkit.getLogger().info("VitalEnchant v" + this.getDescription().getVersion() + " enabled");
 		Bukkit.getLogger().info("Copyright (C) 2022 Leopold Meinel");
 		Bukkit.getLogger().info("This program comes with ABSOLUTELY NO WARRANTY!");
 		Bukkit.getLogger().info("This is free software, and you are welcome to redistribute it under certain conditions.");
-		Bukkit.getLogger().info("See https://github.com/TamrielNetwork/VitalCraft/blob/main/LICENSE for more details.");
+		Bukkit.getLogger().info("See https://github.com/TamrielNetwork/VitalEnchant/blob/main/LICENSE for more details.");
 	}
 
 	@Override
 	public void onDisable() {
 
-		Bukkit.getLogger().info("VitalCraft v" + this.getDescription().getVersion() + " disabled");
+		Bukkit.getLogger().info("VitalEnchant v" + this.getDescription().getVersion() + " disabled");
 	}
 
 	public Messages getMessages() {

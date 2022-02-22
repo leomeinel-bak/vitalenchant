@@ -16,9 +16,9 @@
  * along with this program. If not, see https://github.com/TamrielNetwork/VitalEnchant/blob/main/LICENSE
  */
 
-package com.tamrielnetwork.vitalcraft.utils.commands;
+package com.tamrielnetwork.vitalenchant.utils.commands;
 
-import com.tamrielnetwork.vitalcraft.utils.Chat;
+import com.tamrielnetwork.vitalenchant.utils.Chat;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
@@ -26,6 +26,14 @@ import org.jetbrains.annotations.NotNull;
 public class Cmd {
 	public static boolean isArgsLengthNotEqualTo(@NotNull CommandSender sender, @NotNull String[] args, int length) {
 		if (args.length != length) {
+			Chat.sendMessage(sender, "cmd");
+			return true;
+		}
+		return false;
+	}
+
+	public static boolean isArgsLengthEqualTo(@NotNull CommandSender sender, @NotNull String[] args, int length) {
+		if (args.length == length) {
 			Chat.sendMessage(sender, "cmd");
 			return true;
 		}

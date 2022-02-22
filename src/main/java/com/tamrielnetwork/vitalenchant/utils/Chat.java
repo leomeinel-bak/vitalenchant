@@ -16,9 +16,9 @@
  * along with this program. If not, see https://github.com/TamrielNetwork/VitalEnchant/blob/main/LICENSE
  */
 
-package com.tamrielnetwork.vitalcraft.utils;
+package com.tamrielnetwork.vitalenchant.utils;
 
-import com.tamrielnetwork.vitalcraft.VitalCraft;
+import com.tamrielnetwork.vitalenchant.VitalEnchant;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -28,7 +28,7 @@ import java.util.Objects;
 
 public class Chat {
 
-	private static final VitalCraft main = JavaPlugin.getPlugin(VitalCraft.class);
+	private static final VitalEnchant main = JavaPlugin.getPlugin(VitalEnchant.class);
 
 	public static void sendMessage(@NotNull CommandSender player, @NotNull String message) {
 		player.sendMessage(replaceColors(Objects.requireNonNull(main.getMessages().getMessagesConf().getString(message))));

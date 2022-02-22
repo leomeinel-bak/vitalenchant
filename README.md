@@ -10,23 +10,23 @@
 <!--suppress ALL -->
 <br />
 <p align="center">
-  <a href="https://github.com/TamrielNetwork/VitalTrash">
+  <a href="https://github.com/TamrielNetwork/VitalEnchant">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">VitalTrash</h3>
+<h3 align="center">VitalEnchant</h3>
 
   <p align="center">
-    Open a trash interface on Spigot and Paper
+    Enchant items on Spigot and Paper
     <br />
-    <a href="https://github.com/TamrielNetwork/VitalTrash"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/TamrielNetwork/VitalEnchant"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/TamrielNetwork/VitalTrash">View Demo</a>
+    <a href="https://github.com/TamrielNetwork/VitalEnchant">View Demo</a>
     ·
-    <a href="https://github.com/TamrielNetwork/VitalTrash/issues">Report Bug</a>
+    <a href="https://github.com/TamrielNetwork/VitalEnchant/issues">Report Bug</a>
     ·
-    <a href="https://github.com/TamrielNetwork/VitalTrash/issues">Request Feature</a>
+    <a href="https://github.com/TamrielNetwork/VitalEnchant/issues">Request Feature</a>
   </p>
 
 <!-- TABLE OF CONTENTS -->
@@ -62,13 +62,13 @@
 
 ### Description
 
-VitalTrash is a Plugin that gives players the ability to open a trash interface.
+VitalEnchant is a Plugin that gives players the ability to enchant items.
 
-This plugin is perfect for any server wanting their players to dispose items on the go.
+This plugin is perfect for any server wanting to apply custom enchants to items.
 
 ### Features
 
-* Open Trash interface
+* Enchant items
 
 ### Built With
 
@@ -83,14 +83,15 @@ To get the plugin running on your server follow these simple steps.
 
 ### Commands and Permissions
 
-1. Permission: `vitaltrash.trash`
+1. Permission: `vitalenchant.enchant`
 
-* Command: `/vitaltrash`
-* Description: Toggle trash interface
+* Command: `/vitalenchant <enchantment> <level>`
+* Description: Enchant item
 
 ### Configuration - config.yml
 
 ```
+max-level: 50
 ```
 
 ### Configuration - messages.yml
@@ -99,13 +100,17 @@ To get the plugin running on your server follow these simple steps.
 player-only: "&cThis command can only be executed by players!"
 invalid-option: "&cInvalid option!"
 no-perms: "&7You don't have enough permissions!"
+cmd: "invalid cmd"
+invalid-amount: "invalid amount"
+max-level: "max level"
+invalid-enchant: "invalid enchant"
 ```
 
 <!-- ROADMAP -->
 
 ## Roadmap
 
-See the [open issues](https://github.com/TamrielNetwork/VitalTrash/issues) for a list of proposed features (and known
+See the [open issues](https://github.com/TamrielNetwork/VitalEnchant/issues) for a list of proposed features (and known
 issues).
 
 <!-- CONTRIBUTING -->
@@ -135,7 +140,7 @@ Leopold Meinel - [@TamrielN](https://twitter.com/TamrielN) - Twitter
 
 Leopold Meinel - [contact@tamriel.me](mailto:contact@tamriel.me) - eMail
 
-Project Link - [VitalTrash](https://github.com/TamrielNetwork/VitalTrash) - GitHub
+Project Link - [VitalEnchant](https://github.com/TamrielNetwork/VitalEnchant) - GitHub
 
 <!-- ACKNOWLEDGEMENTS -->
 
@@ -145,26 +150,26 @@ Project Link - [VitalTrash](https://github.com/TamrielNetwork/VitalTrash) - GitH
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[contributors-shield]: https://img.shields.io/github/contributors-anon/TamrielNetwork/VitalTrash?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors-anon/TamrielNetwork/VitalEnchant?style=for-the-badge
 
-[contributors-url]: https://github.com/TamrielNetwork/VitalTrash/graphs/contributors
+[contributors-url]: https://github.com/TamrielNetwork/VitalEnchant/graphs/contributors
 
-[forks-shield]: https://img.shields.io/github/forks/TamrielNetwork/VitalTrash?label=Forks&style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/TamrielNetwork/VitalEnchant?label=Forks&style=for-the-badge
 
-[forks-url]: https://github.com/TamrielNetwork/VitalTrash/network/members
+[forks-url]: https://github.com/TamrielNetwork/VitalEnchant/network/members
 
-[stars-shield]: https://img.shields.io/github/stars/TamrielNetwork/VitalTrash?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/TamrielNetwork/VitalEnchant?style=for-the-badge
 
-[stars-url]: https://github.com/TamrielNetwork/VitalTrash/stargazers
+[stars-url]: https://github.com/TamrielNetwork/VitalEnchant/stargazers
 
-[issues-shield]: https://img.shields.io/github/issues/TamrielNetwork/VitalTrash?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/TamrielNetwork/VitalEnchant?style=for-the-badge
 
-[issues-url]: https://github.com/TamrielNetwork/VitalTrash/issues
+[issues-url]: https://github.com/TamrielNetwork/VitalEnchant/issues
 
-[license-shield]: https://img.shields.io/github/license/TamrielNetwork/VitalTrash?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/TamrielNetwork/VitalEnchant?style=for-the-badge
 
-[license-url]: https://github.com/TamrielNetwork/VitalTrash/blob/main/LICENSE
+[license-url]: https://github.com/TamrielNetwork/VitalEnchant/blob/main/LICENSE
 
-[quality-shield]: https://img.shields.io/codefactor/grade/github/TamrielNetwork/VitalTrash?style=for-the-badge
+[quality-shield]: https://img.shields.io/codefactor/grade/github/TamrielNetwork/VitalEnchant?style=for-the-badge
 
-[quality-url]: https://www.codefactor.io/repository/github/TamrielNetwork/VitalTrash
+[quality-url]: https://www.codefactor.io/repository/github/TamrielNetwork/VitalEnchant

@@ -16,9 +16,9 @@
  * along with this program. If not, see https://github.com/TamrielNetwork/VitalEnchant/blob/main/LICENSE
  */
 
-package com.tamrielnetwork.vitalcraft.files;
+package com.tamrielnetwork.vitalenchant.files;
 
-import com.tamrielnetwork.vitalcraft.VitalCraft;
+import com.tamrielnetwork.vitalenchant.VitalEnchant;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -27,7 +27,7 @@ import java.io.File;
 
 public class Messages {
 
-	private final VitalCraft main = JavaPlugin.getPlugin(VitalCraft.class);
+	private final VitalEnchant main = JavaPlugin.getPlugin(VitalEnchant.class);
 	private final File messagesFile;
 	private final FileConfiguration messagesConf;
 
