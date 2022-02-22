@@ -1,5 +1,5 @@
 /*
- * VitalTp is a Spigot Plugin that gives players the ability to teleport to each other.
+ * VitalCraft is a Spigot Plugin that gives players the ability to open a crafting interface.
  * Copyright © 2022 Leopold Meinel
  *
  * This program is free software: you can redistribute it and/or modify
@@ -13,27 +13,28 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program. If not, see https://github.com/TamrielNetwork/VitalTp/blob/main/LICENSE
+ * along with this program. If not, see https://github.com/TamrielNetwork/VitalCraft/blob/main/LICENSE
  */
 
-package com.tamrielnetwork.vitaltrash.utils;
+package com.tamrielnetwork.vitalcraft.utils;
 
-import com.tamrielnetwork.vitaltrash.VitalTrash;
+import com.tamrielnetwork.vitalcraft.VitalCraft;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
-public class Utils {
+public class Chat {
 
-	private static final VitalTrash main = JavaPlugin.getPlugin(VitalTrash.class);
+	private static final VitalCraft main = JavaPlugin.getPlugin(VitalCraft.class);
 
-	public static void sendMessage(CommandSender player, String message) {
+	public static void sendMessage(@NotNull CommandSender player, @NotNull String message) {
 		player.sendMessage(replaceColors(Objects.requireNonNull(main.getMessages().getMessagesConf().getString(message))));
 	}
 
-	public static String replaceColors(String string) {
+	public static String replaceColors(@NotNull String string) {
 		return ChatColor.translateAlternateColorCodes('&', string);
 	}
 

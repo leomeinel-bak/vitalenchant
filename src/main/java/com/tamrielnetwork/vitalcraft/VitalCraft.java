@@ -1,5 +1,5 @@
 /*
- * VitalTp is a Spigot Plugin that gives players the ability to teleport to each other.
+ * VitalCraft is a Spigot Plugin that gives players the ability to open a crafting interface.
  * Copyright © 2022 Leopold Meinel
  *
  * This program is free software: you can redistribute it and/or modify
@@ -13,32 +13,32 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program. If not, see https://github.com/TamrielNetwork/VitalTp/blob/main/LICENSE
+ * along with this program. If not, see https://github.com/TamrielNetwork/VitalCraft/blob/main/LICENSE
  */
 
-package com.tamrielnetwork.vitaltrash;
+package com.tamrielnetwork.vitalcraft;
 
-import com.tamrielnetwork.vitaltrash.commands.VitalTrashCmd;
-import com.tamrielnetwork.vitaltrash.files.Messages;
+import com.tamrielnetwork.vitalcraft.commands.VitalCraftCmd;
+import com.tamrielnetwork.vitalcraft.files.Messages;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Objects;
 
-public final class VitalTrash extends JavaPlugin {
+public final class VitalCraft extends JavaPlugin {
 
 	private Messages messages;
 
 	@Override
 	public void onEnable() {
 
-		Objects.requireNonNull(getCommand("vitaltrash")).setExecutor(new VitalTrashCmd());
+		Objects.requireNonNull(getCommand("vitalcraft")).setExecutor(new VitalCraftCmd());
 
 		saveDefaultConfig();
 
 		messages = new Messages();
 
-		Bukkit.getLogger().info("VitalTrash v" + this.getDescription().getVersion() + " enabled");
+		Bukkit.getLogger().info("VitalCraft v" + this.getDescription().getVersion() + " enabled");
 		Bukkit.getLogger().info("Copyright (C) 2022 Leopold Meinel");
 		Bukkit.getLogger().info("This program comes with ABSOLUTELY NO WARRANTY!");
 		Bukkit.getLogger().info("This is free software, and you are welcome to redistribute it under certain conditions.");
@@ -48,7 +48,7 @@ public final class VitalTrash extends JavaPlugin {
 	@Override
 	public void onDisable() {
 
-		Bukkit.getLogger().info("VitalTrash v" + this.getDescription().getVersion() + " disabled");
+		Bukkit.getLogger().info("VitalCraft v" + this.getDescription().getVersion() + " disabled");
 	}
 
 	public Messages getMessages() {
