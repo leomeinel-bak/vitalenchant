@@ -53,7 +53,7 @@ public class VitalEnchantCmd implements TabExecutor {
 		}
 		Player senderPlayer = (Player) sender;
 		ItemStack itemStack = senderPlayer.getInventory().getItemInMainHand();
-		Enchantment enchantment = Enchantment.getByKey(NamespacedKey.minecraft(args[0]));
+		Enchantment enchantment = Enchantment.getByKey(NamespacedKey.minecraft(args[0].toLowerCase()));
 
 		if (CmdSpec.isInvalidCmd(sender, args, enchantment, itemStack)) {
 			return;

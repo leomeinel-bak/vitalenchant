@@ -55,7 +55,7 @@ public class CmdSpec {
 		if (isInvalidItem(sender, itemStack)) {
 			return true;
 		}
-		if (isInvalidEnchantment(sender, args[0], enchantment, itemStack)) {
+		if (isInvalidEnchantment(sender, args[0].toLowerCase(), enchantment, itemStack)) {
 			return true;
 		}
 		if (isInvalidNumber(sender, args[1])) {
