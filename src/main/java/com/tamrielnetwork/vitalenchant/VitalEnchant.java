@@ -33,6 +33,7 @@ public final class VitalEnchant extends JavaPlugin {
 	public void onEnable() {
 
 		Objects.requireNonNull(getCommand("vitalenchant")).setExecutor(new VitalEnchantCmd());
+		Objects.requireNonNull(getCommand("vitalenchant")).setTabCompleter(new VitalEnchantCmd());
 
 		saveDefaultConfig();
 
