@@ -51,7 +51,7 @@ public class VitalEnchantCmd implements TabExecutor {
 		ItemStack itemStack = senderPlayer.getInventory().getItemInMainHand();
 		Enchantment enchantment = Enchantment.getByKey(NamespacedKey.minecraft(args[0]));
 
-		if (CmdSpec.isInvalidCmd(sender, args[1], enchantment)) {
+		if (CmdSpec.isInvalidCmd(sender, args, enchantment, itemStack)) {
 			return;
 		}
 		assert enchantment != null;
@@ -60,9 +60,7 @@ public class VitalEnchantCmd implements TabExecutor {
 			itemStack.removeEnchantment(enchantment);
 			return;
 		}
-		if (CmdSpec.getValidEnchantStrings(itemStack).contains(args[0])) {
-			itemStack.addUnsafeEnchantment(enchantment, Integer.parseInt(args[1]));
-		}
+		itemStack.addUnsafeEnchantment(enchantment, Integer.parseInt(args[1]));
 
 	}
 

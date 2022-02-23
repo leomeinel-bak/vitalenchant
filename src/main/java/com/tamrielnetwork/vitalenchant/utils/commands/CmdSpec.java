@@ -46,20 +46,43 @@ public class CmdSpec {
 		return validEnchantmentStrings;
 	}
 
-	public static boolean isInvalidCmd(@NotNull CommandSender sender, @NotNull String arg, Enchantment enchantment) {
+	public static boolean isInvalidCmd(@NotNull CommandSender sender, @NotNull String[] args, Enchantment enchantment, ItemStack itemStack) {
 		if (Cmd.isInvalidSender(sender)) {
 			return true;
 		}
 		if (Cmd.isNotPermitted(sender, "vitalenchant.enchant")) {
 			return true;
 		}
-		if (isInvalidEnchant(sender, enchantment)) {
+		if (isInvalidItem(sender, itemStack)) {
 			return true;
 		}
-		if (isInvalidNumber(sender, arg)) {
+		if (isInvalidEnchant(sender, args[0], enchantment, itemStack)) {
 			return true;
 		}
-		return isOverLimit(sender, arg);
+		if (isInvalidNumber(sender, args[1])) {
+			return true;
+		}
+		return isOverLimit(sender, args[1]);
+	}
+
+	private static boolean isInvalidItem(@NotNull CommandSender sender, @NotNull ItemStack itemStack) {
+		if (itemStack.getType().isAir()) {
+			Chat.sendMessage(sender, "invalid-item");
+			return true;
+		}
+		return false;
+	}
+
+	private static boolean isInvalidEnchant(@NotNull CommandSender sender, @NotNull String arg, Enchantment enchantment, ItemStack itemStack) {
+		if (enchantment == null) {
+			Chat.sendMessage(sender, "invalid-enchant");
+			return true;
+		}
+		if (!CmdSpec.getValidEnchantStrings(itemStack).contains(arg)) {
+			Chat.sendMessage(sender, "invalid-enchant");
+			return true;
+		}
+		return false;
 	}
 
 	private static boolean isInvalidNumber(@NotNull CommandSender sender, @NotNull String arg) {
@@ -77,14 +100,6 @@ public class CmdSpec {
 	private static boolean isOverLimit(@NotNull CommandSender sender, @NotNull String arg) {
 		if (Integer.parseInt(arg) > main.getConfig().getInt("max-level")) {
 			Chat.sendMessage(sender, "max-level");
-			return true;
-		}
-		return false;
-	}
-
-	private static boolean isInvalidEnchant(@NotNull CommandSender sender, Enchantment enchantment) {
-		if (enchantment == null) {
-			Chat.sendMessage(sender, "invalid-enchant");
 			return true;
 		}
 		return false;
