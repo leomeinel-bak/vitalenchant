@@ -38,7 +38,7 @@ public class VitalEnchantCmd implements TabExecutor {
 	@Override
 	public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
 
-		if (Cmd.isArgsLengthEqualTo(sender, args, 0) || Cmd.isArgsLengthNotEqualTo(sender, args, 2)) {
+		if (Cmd.isArgsLengthNotEqualTo(sender, args, 2)) {
 			return true;
 		}
 		doEnchant(sender, args);
@@ -47,6 +47,10 @@ public class VitalEnchantCmd implements TabExecutor {
 	}
 
 	private void doEnchant(@NotNull CommandSender sender, @NotNull String[] args) {
+
+		if (Cmd.isInvalidSender(sender)) {
+			return;
+		}
 		Player senderPlayer = (Player) sender;
 		ItemStack itemStack = senderPlayer.getInventory().getItemInMainHand();
 		Enchantment enchantment = Enchantment.getByKey(NamespacedKey.minecraft(args[0]));
@@ -66,6 +70,7 @@ public class VitalEnchantCmd implements TabExecutor {
 
 	@Override
 	public @Nullable List<String> onTabComplete(@NotNull CommandSender sender, @NotNull Command command, @NotNull String alias, @NotNull String[] args) {
+
 		@Nullable List<String> tabComplete = new ArrayList<>();
 		if (args.length == 1) {
 			Player senderPlayer = (Player) sender;
@@ -81,4 +86,5 @@ public class VitalEnchantCmd implements TabExecutor {
 
 		return tabComplete;
 	}
+
 }

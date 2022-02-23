@@ -53,6 +53,7 @@ public final class VitalEnchant extends JavaPlugin {
 	}
 
 	public Messages getMessages() {
+
 		return messages;
 	}
 

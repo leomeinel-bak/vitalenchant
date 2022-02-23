@@ -31,10 +31,12 @@ public class Chat {
 	private static final VitalEnchant main = JavaPlugin.getPlugin(VitalEnchant.class);
 
 	public static void sendMessage(@NotNull CommandSender player, @NotNull String message) {
+
 		player.sendMessage(replaceColors(Objects.requireNonNull(main.getMessages().getMessagesConf().getString(message))));
 	}
 
 	public static String replaceColors(@NotNull String string) {
+
 		return ChatColor.translateAlternateColorCodes('&', string);
 	}
 
