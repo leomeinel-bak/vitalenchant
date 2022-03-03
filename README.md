@@ -85,7 +85,7 @@ To get the plugin running on your server follow these simple steps.
 
 1. Permission: `vitalenchant.enchant`
 
-* Command: `/vitalenchant <enchantment> <level>`
+* Command: `/enchant <enchantment> <level>`
 * Description: Enchant item
 
 ### Configuration - config.yml
