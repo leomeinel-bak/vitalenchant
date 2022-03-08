@@ -39,7 +39,7 @@ public class VitalEnchantCmd implements TabExecutor {
 	public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
 
 		if (Cmd.isArgsLengthNotEqualTo(sender, args, 2)) {
-			return true;
+			return false;
 		}
 		doEnchant(sender, args);
 		return true;
