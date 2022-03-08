@@ -32,11 +32,12 @@ import java.util.List;
 
 public class CmdSpec {
 
+	private static final VitalEnchant main = JavaPlugin.getPlugin(VitalEnchant.class);
+
 	private CmdSpec() {
+
 		throw new IllegalStateException("Utility class");
 	}
-
-	private static final VitalEnchant main = JavaPlugin.getPlugin(VitalEnchant.class);
 
 	public static List<String> getValidEnchantStrings(ItemStack itemStack) {
 

@@ -45,7 +45,8 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#commands-and-permissions">Commands and Permissions</a></li>
-        <li><a href="#configuration">Configuration</a></li>
+        <li><a href="#configuration - config.yml">Configuration</a></li>
+		<li><a href="#configuration - messages.yml">Configuration</a></li>
       </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -97,13 +98,13 @@ max-level: 50
 ### Configuration - messages.yml
 
 ```
+cmd: "&fUsage: &b/enchant <enchantment> <level>"
+no-perms: "&cYou don't have enough permissions!"
 player-only: "&cThis command can only be executed by players!"
-invalid-option: "&cInvalid option!"
-no-perms: "&7You don't have enough permissions!"
-cmd: "invalid cmd"
-invalid-amount: "invalid amount"
-max-level: "max level"
-invalid-enchant: "invalid enchant"
+invalid-item: "&cInvalid item!"
+invalid-enchant: "&cInvalid enchantment!"
+invalid-amount: "&cInvalid amount!"
+max-level: "&cInvalid level!"
 ```
 
 <!-- ROADMAP -->

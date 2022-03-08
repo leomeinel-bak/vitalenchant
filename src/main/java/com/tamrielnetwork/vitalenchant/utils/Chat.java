@@ -28,11 +28,12 @@ import java.util.Objects;
 
 public class Chat {
 
+	private static final VitalEnchant main = JavaPlugin.getPlugin(VitalEnchant.class);
+
 	private Chat() {
+
 		throw new IllegalStateException("Utility class");
 	}
-
-	private static final VitalEnchant main = JavaPlugin.getPlugin(VitalEnchant.class);
 
 	public static void sendMessage(@NotNull CommandSender player, @NotNull String message) {
 
