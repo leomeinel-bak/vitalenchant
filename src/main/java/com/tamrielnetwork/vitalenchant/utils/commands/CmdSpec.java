@@ -76,8 +76,8 @@ public class CmdSpec {
 		return false;
 	}
 
-	private static boolean isInvalidEnchantment(@NotNull CommandSender sender, @NotNull String arg,
-	                                            Enchantment enchantment, ItemStack itemStack) {
+	private static boolean isInvalidEnchantment(@NotNull CommandSender sender, @NotNull String arg, Enchantment enchantment,
+	                                            ItemStack itemStack) {
 		if (enchantment == null) {
 			Chat.sendMessage(sender, "invalid-enchant");
 			return true;
