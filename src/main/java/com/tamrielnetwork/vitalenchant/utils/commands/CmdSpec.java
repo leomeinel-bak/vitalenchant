@@ -35,25 +35,23 @@ public class CmdSpec {
 	private static final VitalEnchant main = JavaPlugin.getPlugin(VitalEnchant.class);
 
 	private CmdSpec() {
-
 		throw new IllegalStateException("Utility class");
 	}
 
 	public static List<String> getValidEnchantStrings(ItemStack itemStack) {
-
 		List<String> validEnchantmentStrings = new ArrayList<>();
-
 		for (Enchantment enchantment : Enchantment.values()) {
-			if (enchantment.getItemTarget().includes(itemStack)) {
-				validEnchantmentStrings.add(enchantment.getKey().getKey());
+			if (enchantment.getItemTarget()
+			               .includes(itemStack)) {
+				validEnchantmentStrings.add(enchantment.getKey()
+				                                       .getKey());
 			}
 		}
-
 		return validEnchantmentStrings;
 	}
 
-	public static boolean isInvalidCmd(@NotNull CommandSender sender, @NotNull String[] args, Enchantment enchantment, ItemStack itemStack) {
-
+	public static boolean isInvalidCmd(@NotNull CommandSender sender, @NotNull String[] args, Enchantment enchantment,
+	                                   ItemStack itemStack) {
 		if (Cmd.isNotPermitted(sender, "vitalenchant.enchant")) {
 			return true;
 		}
@@ -70,21 +68,22 @@ public class CmdSpec {
 	}
 
 	private static boolean isInvalidItem(@NotNull CommandSender sender, @NotNull ItemStack itemStack) {
-
-		if (itemStack.getType().isAir()) {
+		if (itemStack.getType()
+		             .isAir()) {
 			Chat.sendMessage(sender, "invalid-item");
 			return true;
 		}
 		return false;
 	}
 
-	private static boolean isInvalidEnchantment(@NotNull CommandSender sender, @NotNull String arg, Enchantment enchantment, ItemStack itemStack) {
-
+	private static boolean isInvalidEnchantment(@NotNull CommandSender sender, @NotNull String arg,
+	                                            Enchantment enchantment, ItemStack itemStack) {
 		if (enchantment == null) {
 			Chat.sendMessage(sender, "invalid-enchant");
 			return true;
 		}
-		if (!CmdSpec.getValidEnchantStrings(itemStack).contains(arg)) {
+		if (!CmdSpec.getValidEnchantStrings(itemStack)
+		            .contains(arg)) {
 			Chat.sendMessage(sender, "invalid-enchant");
 			return true;
 		}
@@ -92,7 +91,6 @@ public class CmdSpec {
 	}
 
 	private static boolean isInvalidNumber(@NotNull CommandSender sender, @NotNull String arg) {
-
 		if (!StringUtils.isNumeric(arg)) {
 			Chat.sendMessage(sender, "invalid-amount");
 			return true;
@@ -105,12 +103,11 @@ public class CmdSpec {
 	}
 
 	private static boolean isOverLimit(@NotNull CommandSender sender, @NotNull String arg) {
-
-		if (Integer.parseInt(arg) > main.getConfig().getInt("max-level")) {
+		if (Integer.parseInt(arg) > main.getConfig()
+		                                .getInt("max-level")) {
 			Chat.sendMessage(sender, "max-level");
 			return true;
 		}
 		return false;
 	}
-
 }
