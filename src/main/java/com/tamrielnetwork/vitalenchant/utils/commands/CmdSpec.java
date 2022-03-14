@@ -50,21 +50,13 @@ public class CmdSpec {
 		return validEnchantmentStrings;
 	}
 
-	public static boolean isInvalidCmd(@NotNull CommandSender sender, @NotNull String[] args, Enchantment enchantment,
-	                                   ItemStack itemStack) {
-		if (Cmd.isNotPermitted(sender, "vitalenchant.enchant")) {
-			return true;
-		}
-		if (isInvalidItem(sender, itemStack)) {
-			return true;
-		}
-		if (isInvalidEnchantment(sender, args[0].toLowerCase(), enchantment, itemStack)) {
-			return true;
-		}
-		if (isInvalidNumber(sender, args[1])) {
-			return true;
-		}
-		return isOverLimit(sender, args[1]);
+	public static boolean isInvalidCmd(@NotNull CommandSender sender, @NotNull String perm, @NotNull String[] args,
+	                                   Enchantment enchantment, ItemStack itemStack) {
+		return Cmd.isNotPermitted(sender, perm) || isInvalidItem(sender, itemStack) || isInvalidEnchantment(sender,
+		                                                                                                    args[0].toLowerCase(),
+		                                                                                                    enchantment,
+		                                                                                                    itemStack)
+		       || isInvalidNumber(sender, args[1]) || isOverLimit(sender, args[1]);
 	}
 
 	private static boolean isInvalidItem(@NotNull CommandSender sender, @NotNull ItemStack itemStack) {
@@ -78,12 +70,8 @@ public class CmdSpec {
 
 	private static boolean isInvalidEnchantment(@NotNull CommandSender sender, @NotNull String arg,
 	                                            Enchantment enchantment, ItemStack itemStack) {
-		if (enchantment == null) {
-			Chat.sendMessage(sender, "invalid-enchant");
-			return true;
-		}
-		if (!CmdSpec.getValidEnchantStrings(itemStack)
-		            .contains(arg)) {
+		if (enchantment == null || !CmdSpec.getValidEnchantStrings(itemStack)
+		                                   .contains(arg)) {
 			Chat.sendMessage(sender, "invalid-enchant");
 			return true;
 		}
@@ -91,11 +79,7 @@ public class CmdSpec {
 	}
 
 	private static boolean isInvalidNumber(@NotNull CommandSender sender, @NotNull String arg) {
-		if (!StringUtils.isNumeric(arg)) {
-			Chat.sendMessage(sender, "invalid-amount");
-			return true;
-		}
-		if (Integer.parseInt(arg) < 0) {
+		if (!StringUtils.isNumeric(arg) || Integer.parseInt(arg) < 0) {
 			Chat.sendMessage(sender, "invalid-amount");
 			return true;
 		}

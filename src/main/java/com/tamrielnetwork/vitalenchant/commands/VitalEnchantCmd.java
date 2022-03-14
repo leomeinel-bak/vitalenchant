@@ -54,7 +54,7 @@ public class VitalEnchantCmd
 		ItemStack itemStack = senderPlayer.getInventory()
 		                                  .getItemInMainHand();
 		Enchantment enchantment = Enchantment.getByKey(NamespacedKey.minecraft(args[0].toLowerCase()));
-		if (CmdSpec.isInvalidCmd(sender, args, enchantment, itemStack)) {
+		if (CmdSpec.isInvalidCmd(sender, "vitalenchant.enchant", args, enchantment, itemStack)) {
 			return;
 		}
 		assert enchantment != null;
