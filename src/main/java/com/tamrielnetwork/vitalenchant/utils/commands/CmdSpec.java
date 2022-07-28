@@ -20,7 +20,6 @@ package com.tamrielnetwork.vitalenchant.utils.commands;
 
 import com.tamrielnetwork.vitalenchant.VitalEnchant;
 import com.tamrielnetwork.vitalenchant.utils.Chat;
-import org.apache.commons.lang.StringUtils;
 import org.bukkit.command.CommandSender;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
@@ -29,6 +28,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class CmdSpec {
 
@@ -79,7 +79,7 @@ public class CmdSpec {
 	}
 
 	private static boolean isInvalidNumber(@NotNull CommandSender sender, @NotNull String arg) {
-		if (!StringUtils.isNumeric(arg) || Integer.parseInt(arg) < 0) {
+		if (!isNumeric(arg) || Integer.parseInt(arg) < 0) {
 			Chat.sendMessage(sender, "invalid-amount");
 			return true;
 		}
@@ -93,5 +93,18 @@ public class CmdSpec {
 			return true;
 		}
 		return false;
+	}
+
+	private static boolean isNumeric(final CharSequence charSequence) {
+		if (isEmpty(charSequence)) {
+			return false;
+		}
+		final int sequenceSize = charSequence.length();
+		return IntStream.range(0, sequenceSize)
+		                .allMatch(i -> Character.isDigit(charSequence.charAt(i)));
+	}
+
+	private static boolean isEmpty(final CharSequence charSequence) {
+		return charSequence == null || charSequence.length() == 0;
 	}
 }
