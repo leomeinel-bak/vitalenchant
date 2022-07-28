@@ -16,10 +16,10 @@
  * along with this program. If not, see https://github.com/LeoMeinel/VitalEnchant/blob/main/LICENSE
  */
 
-package com.tamrielnetwork.vitalenchant.commands;
+package dev.meinel.leo.vitalenchant.commands;
 
-import com.tamrielnetwork.vitalenchant.utils.commands.Cmd;
-import com.tamrielnetwork.vitalenchant.utils.commands.CmdSpec;
+import dev.meinel.leo.vitalenchant.utils.commands.Cmd;
+import dev.meinel.leo.vitalenchant.utils.commands.CmdSpec;
 import org.bukkit.NamespacedKey;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;

@@ -16,40 +16,31 @@
  * along with this program. If not, see https://github.com/LeoMeinel/VitalEnchant/blob/main/LICENSE
  */
 
-package com.tamrielnetwork.vitalenchant.utils.commands;
+package dev.meinel.leo.vitalenchant.utils;
 
-import com.tamrielnetwork.vitalenchant.utils.Chat;
+import dev.meinel.leo.vitalenchant.VitalEnchant;
+import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
+import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 
-public class Cmd {
+import java.util.Objects;
 
-	private Cmd() {
+public class Chat {
+
+	private static final VitalEnchant main = JavaPlugin.getPlugin(VitalEnchant.class);
+
+	private Chat() {
 		throw new IllegalStateException("Utility class");
 	}
 
-	public static boolean isArgsLengthNotEqualTo(@NotNull CommandSender sender, @NotNull String[] args, int length) {
-		if (args.length != length) {
-			Chat.sendMessage(sender, "cmd");
-			return true;
-		}
-		return false;
+	public static void sendMessage(@NotNull CommandSender player, @NotNull String message) {
+		player.sendMessage(replaceColors(Objects.requireNonNull(main.getMessages()
+		                                                            .getMessagesConf()
+		                                                            .getString(message))));
 	}
 
-	public static boolean isNotPermitted(@NotNull CommandSender sender, @NotNull String perm) {
-		if (!sender.hasPermission(perm)) {
-			Chat.sendMessage(sender, "no-perms");
-			return true;
-		}
-		return false;
-	}
-
-	public static boolean isInvalidSender(@NotNull CommandSender sender) {
-		if (!(sender instanceof Player)) {
-			Chat.sendMessage(sender, "player-only");
-			return true;
-		}
-		return false;
+	public static String replaceColors(@NotNull String string) {
+		return ChatColor.translateAlternateColorCodes('&', string);
 	}
 }

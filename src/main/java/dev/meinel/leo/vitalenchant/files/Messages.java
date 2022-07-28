@@ -16,9 +16,9 @@
  * along with this program. If not, see https://github.com/LeoMeinel/VitalEnchant/blob/main/LICENSE
  */
 
-package com.tamrielnetwork.vitalenchant.files;
+package dev.meinel.leo.vitalenchant.files;
 
-import com.tamrielnetwork.vitalenchant.VitalEnchant;
+import dev.meinel.leo.vitalenchant.VitalEnchant;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;

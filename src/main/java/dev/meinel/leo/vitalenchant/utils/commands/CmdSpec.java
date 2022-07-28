@@ -16,10 +16,10 @@
  * along with this program. If not, see https://github.com/LeoMeinel/VitalEnchant/blob/main/LICENSE
  */
 
-package com.tamrielnetwork.vitalenchant.utils.commands;
+package dev.meinel.leo.vitalenchant.utils.commands;
 
-import com.tamrielnetwork.vitalenchant.VitalEnchant;
-import com.tamrielnetwork.vitalenchant.utils.Chat;
+import dev.meinel.leo.vitalenchant.VitalEnchant;
+import dev.meinel.leo.vitalenchant.utils.Chat;
 import org.bukkit.command.CommandSender;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;

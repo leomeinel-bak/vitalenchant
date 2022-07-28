@@ -1,6 +1,6 @@
 name: VitalEnchant
 version: @version@
-main: com.tamrielnetwork.vitalenchant.VitalEnchant
+main: dev.meinel.leo.vitalenchant.VitalEnchant
 api-version: 1.17
 authors: [ Leopold Meinel ]
 description: Gives players the ability to enchant items.

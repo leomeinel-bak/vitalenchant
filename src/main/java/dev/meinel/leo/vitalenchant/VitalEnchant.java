@@ -16,10 +16,10 @@
  * along with this program. If not, see https://github.com/LeoMeinel/VitalEnchant/blob/main/LICENSE
  */
 
-package com.tamrielnetwork.vitalenchant;
+package dev.meinel.leo.vitalenchant;
 
-import com.tamrielnetwork.vitalenchant.commands.VitalEnchantCmd;
-import com.tamrielnetwork.vitalenchant.files.Messages;
+import dev.meinel.leo.vitalenchant.commands.VitalEnchantCmd;
+import dev.meinel.leo.vitalenchant.files.Messages;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
