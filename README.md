@@ -10,7 +10,7 @@
 <!--suppress ALL -->
 <br />
 <p align="center">
-  <a href="https://github.com/TamrielNetwork/VitalEnchant">
+  <a href="https://github.com/LeoMeinel/VitalEnchant">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -19,14 +19,14 @@
   <p align="center">
     Enchant items on Spigot and Paper
     <br />
-    <a href="https://github.com/TamrielNetwork/VitalEnchant"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/LeoMeinel/VitalEnchant"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/TamrielNetwork/VitalEnchant">View Demo</a>
+    <a href="https://github.com/LeoMeinel/VitalEnchant">View Demo</a>
     ·
-    <a href="https://github.com/TamrielNetwork/VitalEnchant/issues">Report Bug</a>
+    <a href="https://github.com/LeoMeinel/VitalEnchant/issues">Report Bug</a>
     ·
-    <a href="https://github.com/TamrielNetwork/VitalEnchant/issues">Request Feature</a>
+    <a href="https://github.com/LeoMeinel/VitalEnchant/issues">Request Feature</a>
   </p>
 
 <!-- TABLE OF CONTENTS -->
@@ -111,7 +111,7 @@ max-level: "&cInvalid level!"
 
 ## Roadmap
 
-See the [open issues](https://github.com/TamrielNetwork/VitalEnchant/issues) for a list of proposed features (and known
+See the [open issues](https://github.com/LeoMeinel/VitalEnchant/issues) for a list of proposed features (and known
 issues).
 
 <!-- CONTRIBUTING -->
@@ -141,7 +141,7 @@ Leopold Meinel - [@TamrielN](https://twitter.com/TamrielN) - Twitter
 
 Leopold Meinel - [contact@tamriel.me](mailto:contact@tamriel.me) - eMail
 
-Project Link - [VitalEnchant](https://github.com/TamrielNetwork/VitalEnchant) - GitHub
+Project Link - [VitalEnchant](https://github.com/LeoMeinel/VitalEnchant) - GitHub
 
 <!-- ACKNOWLEDGEMENTS -->
 
@@ -151,26 +151,26 @@ Project Link - [VitalEnchant](https://github.com/TamrielNetwork/VitalEnchant) - 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[contributors-shield]: https://img.shields.io/github/contributors-anon/TamrielNetwork/VitalEnchant?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors-anon/LeoMeinel/VitalEnchant?style=for-the-badge
 
-[contributors-url]: https://github.com/TamrielNetwork/VitalEnchant/graphs/contributors
+[contributors-url]: https://github.com/LeoMeinel/VitalEnchant/graphs/contributors
 
-[forks-shield]: https://img.shields.io/github/forks/TamrielNetwork/VitalEnchant?label=Forks&style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/LeoMeinel/VitalEnchant?label=Forks&style=for-the-badge
 
-[forks-url]: https://github.com/TamrielNetwork/VitalEnchant/network/members
+[forks-url]: https://github.com/LeoMeinel/VitalEnchant/network/members
 
-[stars-shield]: https://img.shields.io/github/stars/TamrielNetwork/VitalEnchant?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/LeoMeinel/VitalEnchant?style=for-the-badge
 
-[stars-url]: https://github.com/TamrielNetwork/VitalEnchant/stargazers
+[stars-url]: https://github.com/LeoMeinel/VitalEnchant/stargazers
 
-[issues-shield]: https://img.shields.io/github/issues/TamrielNetwork/VitalEnchant?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/LeoMeinel/VitalEnchant?style=for-the-badge
 
-[issues-url]: https://github.com/TamrielNetwork/VitalEnchant/issues
+[issues-url]: https://github.com/LeoMeinel/VitalEnchant/issues
 
-[license-shield]: https://img.shields.io/github/license/TamrielNetwork/VitalEnchant?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/LeoMeinel/VitalEnchant?style=for-the-badge
 
-[license-url]: https://github.com/TamrielNetwork/VitalEnchant/blob/main/LICENSE
+[license-url]: https://github.com/LeoMeinel/VitalEnchant/blob/main/LICENSE
 
-[quality-shield]: https://img.shields.io/codefactor/grade/github/TamrielNetwork/VitalEnchant?style=for-the-badge
+[quality-shield]: https://img.shields.io/codefactor/grade/github/LeoMeinel/VitalEnchant?style=for-the-badge
 
-[quality-url]: https://www.codefactor.io/repository/github/TamrielNetwork/VitalEnchant
+[quality-url]: https://www.codefactor.io/repository/github/LeoMeinel/VitalEnchant
