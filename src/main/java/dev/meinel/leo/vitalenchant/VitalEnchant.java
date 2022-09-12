@@ -18,39 +18,39 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.Objects;
 
 public final class VitalEnchant
-		extends JavaPlugin {
+        extends JavaPlugin {
 
-	private Messages messages;
+    private Messages messages;
 
-	@Override
-	public void onEnable() {
-		Objects.requireNonNull(getCommand("enchant"))
-				.setExecutor(new VitalEnchantCmd());
-		Objects.requireNonNull(getCommand("enchant"))
-				.setTabCompleter(new VitalEnchantCmd());
-		saveDefaultConfig();
-		messages = new Messages();
-		Bukkit.getLogger()
-				.info("VitalEnchant v" + this.getDescription()
-						.getVersion() + " enabled");
-		Bukkit.getLogger()
-				.info("Copyright (C) 2022 Leopold Meinel");
-		Bukkit.getLogger()
-				.info("This program comes with ABSOLUTELY NO WARRANTY!");
-		Bukkit.getLogger()
-				.info("This is free software, and you are welcome to redistribute it under certain conditions.");
-		Bukkit.getLogger()
-				.info("See https://github.com/LeoMeinel/VitalEnchant/blob/main/LICENSE for more details.");
-	}
+    @Override
+    public void onEnable() {
+        Objects.requireNonNull(getCommand("enchant"))
+                .setExecutor(new VitalEnchantCmd());
+        Objects.requireNonNull(getCommand("enchant"))
+                .setTabCompleter(new VitalEnchantCmd());
+        saveDefaultConfig();
+        messages = new Messages();
+        Bukkit.getLogger()
+                .info("VitalEnchant v" + this.getDescription()
+                        .getVersion() + " enabled");
+        Bukkit.getLogger()
+                .info("Copyright (C) 2022 Leopold Meinel");
+        Bukkit.getLogger()
+                .info("This program comes with ABSOLUTELY NO WARRANTY!");
+        Bukkit.getLogger()
+                .info("This is free software, and you are welcome to redistribute it under certain conditions.");
+        Bukkit.getLogger()
+                .info("See https://github.com/LeoMeinel/VitalEnchant/blob/main/LICENSE for more details.");
+    }
 
-	@Override
-	public void onDisable() {
-		Bukkit.getLogger()
-				.info("VitalEnchant v" + this.getDescription()
-						.getVersion() + " disabled");
-	}
+    @Override
+    public void onDisable() {
+        Bukkit.getLogger()
+                .info("VitalEnchant v" + this.getDescription()
+                        .getVersion() + " disabled");
+    }
 
-	public Messages getMessages() {
-		return messages;
-	}
+    public Messages getMessages() {
+        return messages;
+    }
 }
