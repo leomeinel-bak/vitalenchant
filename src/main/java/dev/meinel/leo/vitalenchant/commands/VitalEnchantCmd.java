@@ -1,19 +1,11 @@
 /*
- * VitalEnchant is a Spigot Plugin that gives players the ability to enchant items.
- * Copyright © 2022 Leopold Meinel & contributors
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see https://github.com/LeoMeinel/VitalEnchant/blob/main/LICENSE
+ * File: VitalEnchantCmd.java
+ * Author: Leopold Meinel (leo@meinel.dev)
+ * -----
+ * Copyright (c) 2022 Leopold Meinel & contributors
+ * SPDX ID: GPL-3.0-or-later
+ * URL: https://www.gnu.org/licenses/gpl-3.0-standalone.html
+ * -----
  */
 
 package dev.meinel.leo.vitalenchant.commands;
@@ -38,7 +30,7 @@ public class VitalEnchantCmd
 
 	@Override
 	public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label,
-	                         @NotNull String[] args) {
+			@NotNull String[] args) {
 		if (Cmd.isArgsLengthNotEqualTo(sender, args, 2)) {
 			return false;
 		}
@@ -52,7 +44,7 @@ public class VitalEnchantCmd
 		}
 		Player senderPlayer = (Player) sender;
 		ItemStack itemStack = senderPlayer.getInventory()
-		                                  .getItemInMainHand();
+				.getItemInMainHand();
 		Enchantment enchantment = Enchantment.getByKey(NamespacedKey.minecraft(args[0].toLowerCase()));
 		if (CmdSpec.isInvalidCmd(sender, "vitalenchant.enchant", args, enchantment, itemStack)) {
 			return;
@@ -67,14 +59,15 @@ public class VitalEnchantCmd
 
 	@Override
 	public @Nullable List<String> onTabComplete(@NotNull CommandSender sender, @NotNull Command command,
-	                                            @NotNull String alias, @NotNull String[] args) {
-		@Nullable List<String> tabComplete = new ArrayList<>();
+			@NotNull String alias, @NotNull String[] args) {
+		@Nullable
+		List<String> tabComplete = new ArrayList<>();
 		if (args.length == 1) {
 			Player senderPlayer = (Player) sender;
 			ItemStack itemStack = senderPlayer.getInventory()
-			                                  .getItemInMainHand();
+					.getItemInMainHand();
 			if (itemStack.getType()
-			             .isAir()) {
+					.isAir()) {
 				return null;
 			}
 			if (sender.hasPermission("vitalenchant.enchant")) {

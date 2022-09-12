@@ -1,19 +1,11 @@
 /*
- * VitalEnchant is a Spigot Plugin that gives players the ability to enchant items.
- * Copyright © 2022 Leopold Meinel & contributors
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see https://github.com/LeoMeinel/VitalEnchant/blob/main/LICENSE
+ * File: CmdSpec.java
+ * Author: Leopold Meinel (leo@meinel.dev)
+ * -----
+ * Copyright (c) 2022 Leopold Meinel & contributors
+ * SPDX ID: GPL-3.0-or-later
+ * URL: https://www.gnu.org/licenses/gpl-3.0-standalone.html
+ * -----
  */
 
 package dev.meinel.leo.vitalenchant.utils.commands;
@@ -42,26 +34,26 @@ public class CmdSpec {
 		List<String> validEnchantmentStrings = new ArrayList<>();
 		for (Enchantment enchantment : Enchantment.values()) {
 			if (enchantment.getItemTarget()
-			               .includes(itemStack)) {
+					.includes(itemStack)) {
 				validEnchantmentStrings.add(enchantment.getKey()
-				                                       .getKey());
+						.getKey());
 			}
 		}
 		return validEnchantmentStrings;
 	}
 
 	public static boolean isInvalidCmd(@NotNull CommandSender sender, @NotNull String perm, @NotNull String[] args,
-	                                   Enchantment enchantment, ItemStack itemStack) {
+			Enchantment enchantment, ItemStack itemStack) {
 		return Cmd.isNotPermitted(sender, perm) || isInvalidItem(sender, itemStack) || isInvalidEnchantment(sender,
-		                                                                                                    args[0].toLowerCase(),
-		                                                                                                    enchantment,
-		                                                                                                    itemStack)
-		       || isInvalidNumber(sender, args[1]) || isOverLimit(sender, args[1]);
+				args[0].toLowerCase(),
+				enchantment,
+				itemStack)
+				|| isInvalidNumber(sender, args[1]) || isOverLimit(sender, args[1]);
 	}
 
 	private static boolean isInvalidItem(@NotNull CommandSender sender, @NotNull ItemStack itemStack) {
 		if (itemStack.getType()
-		             .isAir()) {
+				.isAir()) {
 			Chat.sendMessage(sender, "invalid-item");
 			return true;
 		}
@@ -69,9 +61,9 @@ public class CmdSpec {
 	}
 
 	private static boolean isInvalidEnchantment(@NotNull CommandSender sender, @NotNull String arg,
-	                                            Enchantment enchantment, ItemStack itemStack) {
+			Enchantment enchantment, ItemStack itemStack) {
 		if (enchantment == null || !CmdSpec.getValidEnchantStrings(itemStack)
-		                                   .contains(arg)) {
+				.contains(arg)) {
 			Chat.sendMessage(sender, "invalid-enchant");
 			return true;
 		}
@@ -88,7 +80,7 @@ public class CmdSpec {
 
 	private static boolean isOverLimit(@NotNull CommandSender sender, @NotNull String arg) {
 		if (Integer.parseInt(arg) > main.getConfig()
-		                                .getInt("max-level")) {
+				.getInt("max-level")) {
 			Chat.sendMessage(sender, "max-level");
 			return true;
 		}
@@ -101,7 +93,7 @@ public class CmdSpec {
 		}
 		final int sequenceSize = charSequence.length();
 		return IntStream.range(0, sequenceSize)
-		                .allMatch(i -> Character.isDigit(charSequence.charAt(i)));
+				.allMatch(i -> Character.isDigit(charSequence.charAt(i)));
 	}
 
 	private static boolean isEmpty(final CharSequence charSequence) {

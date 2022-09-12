@@ -1,4 +1,5 @@
 <!-- PROJECT SHIELDS -->
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -69,12 +70,12 @@ This plugin is perfect for any server wanting to apply custom enchants to items.
 
 ### Features
 
-* Enchant items
+- Enchant items
 
 ### Built With
 
-* [Gradle 7](https://docs.gradle.org/7.4/release-notes.html)
-* [OpenJDK 17](https://openjdk.java.net/projects/jdk/17/)
+- [Gradle 7](https://docs.gradle.org/7.4/release-notes.html)
+- [OpenJDK 17](https://openjdk.java.net/projects/jdk/17/)
 
 <!-- GETTING STARTED -->
 
@@ -86,8 +87,8 @@ To get the plugin running on your server follow these simple steps.
 
 1. Permission: `vitalenchant.enchant`
 
-* Command: `/enchant <enchantment> <level>`
-* Description: Enchant item
+- Command: `/enchant <enchantment> <level>`
+- Description: Enchant item
 
 ### Configuration - config.yml
 
@@ -137,8 +138,6 @@ Distributed under the GNU General Public License v3.0. See `LICENSE` for more in
 
 ## Contact
 
-
-
 Leopold Meinel - [leo@meinel.dev](mailto:leo@meinel.dev) - eMail
 
 Project Link - [VitalEnchant](https://github.com/LeoMeinel/VitalEnchant) - GitHub
@@ -147,30 +146,19 @@ Project Link - [VitalEnchant](https://github.com/LeoMeinel/VitalEnchant) - GitHu
 
 ### Acknowledgements
 
-* [README.md - othneildrew](https://github.com/othneildrew/Best-README-Template)
+- [README.md - othneildrew](https://github.com/othneildrew/Best-README-Template)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [contributors-shield]: https://img.shields.io/github/contributors-anon/LeoMeinel/VitalEnchant?style=for-the-badge
-
 [contributors-url]: https://github.com/LeoMeinel/VitalEnchant/graphs/contributors
-
 [forks-shield]: https://img.shields.io/github/forks/LeoMeinel/VitalEnchant?label=Forks&style=for-the-badge
-
 [forks-url]: https://github.com/LeoMeinel/VitalEnchant/network/members
-
 [stars-shield]: https://img.shields.io/github/stars/LeoMeinel/VitalEnchant?style=for-the-badge
-
 [stars-url]: https://github.com/LeoMeinel/VitalEnchant/stargazers
-
 [issues-shield]: https://img.shields.io/github/issues/LeoMeinel/VitalEnchant?style=for-the-badge
-
 [issues-url]: https://github.com/LeoMeinel/VitalEnchant/issues
-
 [license-shield]: https://img.shields.io/github/license/LeoMeinel/VitalEnchant?style=for-the-badge
-
 [license-url]: https://github.com/LeoMeinel/VitalEnchant/blob/main/LICENSE
-
 [quality-shield]: https://img.shields.io/codefactor/grade/github/LeoMeinel/VitalEnchant?style=for-the-badge
-
 [quality-url]: https://www.codefactor.io/repository/github/LeoMeinel/VitalEnchant
