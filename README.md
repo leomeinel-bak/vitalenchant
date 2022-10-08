@@ -11,7 +11,7 @@
 <!--suppress ALL -->
 <br />
 <p align="center">
-  <a href="https://github.com/LeoMeinel/VitalEnchant">
+  <a href="https://github.com/LeoMeinel/vitalenchant">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -20,14 +20,14 @@
   <p align="center">
     Enchant items on Spigot and Paper
     <br />
-    <a href="https://github.com/LeoMeinel/VitalEnchant"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/LeoMeinel/vitalenchant"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/LeoMeinel/VitalEnchant">View Demo</a>
+    <a href="https://github.com/LeoMeinel/vitalenchant">View Demo</a>
     ·
-    <a href="https://github.com/LeoMeinel/VitalEnchant/issues">Report Bug</a>
+    <a href="https://github.com/LeoMeinel/vitalenchant/issues">Report Bug</a>
     ·
-    <a href="https://github.com/LeoMeinel/VitalEnchant/issues">Request Feature</a>
+    <a href="https://github.com/LeoMeinel/vitalenchant/issues">Request Feature</a>
   </p>
 
 <!-- ABOUT THE PROJECT -->
@@ -84,7 +84,7 @@ max-level: "&cInvalid level!"
 
 ## Roadmap
 
-See the [open issues](https://github.com/LeoMeinel/VitalEnchant/issues) for a list of proposed features (and known
+See the [open issues](https://github.com/LeoMeinel/vitalenchant/issues) for a list of proposed features (and known
 issues).
 
 <!-- CONTRIBUTING -->
@@ -112,7 +112,7 @@ Distributed under the GNU General Public License v3.0. See `LICENSE` for more in
 
 Leopold Meinel - [leo@meinel.dev](mailto:leo@meinel.dev) - eMail
 
-Project Link - [VitalEnchant](https://github.com/LeoMeinel/VitalEnchant) - GitHub
+Project Link - [VitalEnchant](https://github.com/LeoMeinel/vitalenchant) - GitHub
 
 <!-- ACKNOWLEDGEMENTS -->
 
@@ -122,15 +122,15 @@ Project Link - [VitalEnchant](https://github.com/LeoMeinel/VitalEnchant) - GitHu
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[contributors-shield]: https://img.shields.io/github/contributors-anon/LeoMeinel/VitalEnchant?style=for-the-badge
-[contributors-url]: https://github.com/LeoMeinel/VitalEnchant/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/LeoMeinel/VitalEnchant?label=Forks&style=for-the-badge
-[forks-url]: https://github.com/LeoMeinel/VitalEnchant/network/members
-[stars-shield]: https://img.shields.io/github/stars/LeoMeinel/VitalEnchant?style=for-the-badge
-[stars-url]: https://github.com/LeoMeinel/VitalEnchant/stargazers
-[issues-shield]: https://img.shields.io/github/issues/LeoMeinel/VitalEnchant?style=for-the-badge
-[issues-url]: https://github.com/LeoMeinel/VitalEnchant/issues
-[license-shield]: https://img.shields.io/github/license/LeoMeinel/VitalEnchant?style=for-the-badge
-[license-url]: https://github.com/LeoMeinel/VitalEnchant/blob/main/LICENSE
-[quality-shield]: https://img.shields.io/codefactor/grade/github/LeoMeinel/VitalEnchant?style=for-the-badge
-[quality-url]: https://www.codefactor.io/repository/github/LeoMeinel/VitalEnchant
+[contributors-shield]: https://img.shields.io/github/contributors-anon/LeoMeinel/vitalenchant?style=for-the-badge
+[contributors-url]: https://github.com/LeoMeinel/vitalenchant/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/LeoMeinel/vitalenchant?label=Forks&style=for-the-badge
+[forks-url]: https://github.com/LeoMeinel/vitalenchant/network/members
+[stars-shield]: https://img.shields.io/github/stars/LeoMeinel/vitalenchant?style=for-the-badge
+[stars-url]: https://github.com/LeoMeinel/vitalenchant/stargazers
+[issues-shield]: https://img.shields.io/github/issues/LeoMeinel/vitalenchant?style=for-the-badge
+[issues-url]: https://github.com/LeoMeinel/vitalenchant/issues
+[license-shield]: https://img.shields.io/github/license/LeoMeinel/vitalenchant?style=for-the-badge
+[license-url]: https://github.com/LeoMeinel/vitalenchant/blob/main/LICENSE
+[quality-shield]: https://img.shields.io/codefactor/grade/github/LeoMeinel/vitalenchant?style=for-the-badge
+[quality-url]: https://www.codefactor.io/repository/github/LeoMeinel/vitalenchant
