@@ -2,7 +2,7 @@
  * File: VitalEnchantCmd.java
  * Author: Leopold Meinel (leo@meinel.dev)
  * -----
- * Copyright (c) 2022 Leopold Meinel & contributors
+ * Copyright (c) 2023 Leopold Meinel & contributors
  * SPDX ID: GPL-3.0-or-later
  * URL: https://www.gnu.org/licenses/gpl-3.0-standalone.html
  * -----
@@ -25,12 +25,11 @@ import org.jetbrains.annotations.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VitalEnchantCmd
-        implements TabExecutor {
+public class VitalEnchantCmd implements TabExecutor {
 
     @Override
-    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label,
-            @NotNull String[] args) {
+    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command,
+            @NotNull String label, @NotNull String[] args) {
         if (Cmd.isArgsLengthNotEqualTo(sender, args, 2)) {
             return false;
         }
@@ -43,9 +42,9 @@ public class VitalEnchantCmd
             return;
         }
         Player senderPlayer = (Player) sender;
-        ItemStack itemStack = senderPlayer.getInventory()
-                .getItemInMainHand();
-        Enchantment enchantment = Enchantment.getByKey(NamespacedKey.minecraft(args[0].toLowerCase()));
+        ItemStack itemStack = senderPlayer.getInventory().getItemInMainHand();
+        Enchantment enchantment =
+                Enchantment.getByKey(NamespacedKey.minecraft(args[0].toLowerCase()));
         if (CmdSpec.isInvalidCmd(sender, "vitalenchant.enchant", args, enchantment, itemStack)) {
             return;
         }
@@ -58,16 +57,14 @@ public class VitalEnchantCmd
     }
 
     @Override
-    public @Nullable List<String> onTabComplete(@NotNull CommandSender sender, @NotNull Command command,
-            @NotNull String alias, @NotNull String[] args) {
+    public @Nullable List<String> onTabComplete(@NotNull CommandSender sender,
+            @NotNull Command command, @NotNull String alias, @NotNull String[] args) {
         @Nullable
         List<String> tabComplete = new ArrayList<>();
         if (args.length == 1) {
             Player senderPlayer = (Player) sender;
-            ItemStack itemStack = senderPlayer.getInventory()
-                    .getItemInMainHand();
-            if (itemStack.getType()
-                    .isAir()) {
+            ItemStack itemStack = senderPlayer.getInventory().getItemInMainHand();
+            if (itemStack.getType().isAir()) {
                 return null;
             }
             if (sender.hasPermission("vitalenchant.enchant")) {

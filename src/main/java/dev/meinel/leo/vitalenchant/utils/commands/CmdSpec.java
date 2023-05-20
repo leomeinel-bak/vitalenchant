@@ -2,7 +2,7 @@
  * File: CmdSpec.java
  * Author: Leopold Meinel (leo@meinel.dev)
  * -----
- * Copyright (c) 2022 Leopold Meinel & contributors
+ * Copyright (c) 2023 Leopold Meinel & contributors
  * SPDX ID: GPL-3.0-or-later
  * URL: https://www.gnu.org/licenses/gpl-3.0-standalone.html
  * -----
@@ -33,27 +33,23 @@ public class CmdSpec {
     public static List<String> getValidEnchantStrings(ItemStack itemStack) {
         List<String> validEnchantmentStrings = new ArrayList<>();
         for (Enchantment enchantment : Enchantment.values()) {
-            if (enchantment.getItemTarget()
-                    .includes(itemStack)) {
-                validEnchantmentStrings.add(enchantment.getKey()
-                        .getKey());
+            if (enchantment.getItemTarget().includes(itemStack)) {
+                validEnchantmentStrings.add(enchantment.getKey().getKey());
             }
         }
         return validEnchantmentStrings;
     }
 
-    public static boolean isInvalidCmd(@NotNull CommandSender sender, @NotNull String perm, @NotNull String[] args,
-            Enchantment enchantment, ItemStack itemStack) {
-        return Cmd.isNotPermitted(sender, perm) || isInvalidItem(sender, itemStack) || isInvalidEnchantment(sender,
-                args[0].toLowerCase(),
-                enchantment,
-                itemStack)
+    public static boolean isInvalidCmd(@NotNull CommandSender sender, @NotNull String perm,
+            @NotNull String[] args, Enchantment enchantment, ItemStack itemStack) {
+        return Cmd.isNotPermitted(sender, perm) || isInvalidItem(sender, itemStack)
+                || isInvalidEnchantment(sender, args[0].toLowerCase(), enchantment, itemStack)
                 || isInvalidNumber(sender, args[1]) || isOverLimit(sender, args[1]);
     }
 
-    private static boolean isInvalidItem(@NotNull CommandSender sender, @NotNull ItemStack itemStack) {
-        if (itemStack.getType()
-                .isAir()) {
+    private static boolean isInvalidItem(@NotNull CommandSender sender,
+            @NotNull ItemStack itemStack) {
+        if (itemStack.getType().isAir()) {
             Chat.sendMessage(sender, "invalid-item");
             return true;
         }
@@ -62,8 +58,7 @@ public class CmdSpec {
 
     private static boolean isInvalidEnchantment(@NotNull CommandSender sender, @NotNull String arg,
             Enchantment enchantment, ItemStack itemStack) {
-        if (enchantment == null || !CmdSpec.getValidEnchantStrings(itemStack)
-                .contains(arg)) {
+        if (enchantment == null || !CmdSpec.getValidEnchantStrings(itemStack).contains(arg)) {
             Chat.sendMessage(sender, "invalid-enchant");
             return true;
         }
@@ -79,8 +74,7 @@ public class CmdSpec {
     }
 
     private static boolean isOverLimit(@NotNull CommandSender sender, @NotNull String arg) {
-        if (Integer.parseInt(arg) > main.getConfig()
-                .getInt("max-level")) {
+        if (Integer.parseInt(arg) > main.getConfig().getInt("max-level")) {
             Chat.sendMessage(sender, "max-level");
             return true;
         }
