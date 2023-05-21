@@ -71,7 +71,6 @@ max-level: 50
 ### Configuration - messages.yml
 
 ```yaml
-cmd: "&fUsage: &b/enchant <enchantment> <level>"
 no-perms: "&cYou don't have enough permissions!"
 player-only: "&cThis command can only be executed by players!"
 invalid-item: "&cInvalid item!"
