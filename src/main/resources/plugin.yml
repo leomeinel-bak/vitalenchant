@@ -7,7 +7,7 @@ description: Gives players the ability to enchant items.
 commands:
   enchant:
     description: "Main command"
-    usage: "/enchant"
+    usage: "/enchant <enchantment> <level>"
 permissions:
   vitalenchant.enchant:
     description: "Permission to enchant items"
