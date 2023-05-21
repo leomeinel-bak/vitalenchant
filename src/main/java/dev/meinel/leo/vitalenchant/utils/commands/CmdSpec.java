@@ -42,7 +42,7 @@ public class CmdSpec {
 
     public static boolean isInvalidCmd(@NotNull CommandSender sender, @NotNull String perm,
             @NotNull String[] args, Enchantment enchantment, ItemStack itemStack) {
-        return Cmd.isNotPermitted(sender, perm) || isInvalidItem(sender, itemStack)
+        return !Cmd.isPermitted(sender, perm) || isInvalidItem(sender, itemStack)
                 || isInvalidEnchantment(sender, args[0].toLowerCase(), enchantment, itemStack)
                 || isInvalidNumber(sender, args[1]) || isOverLimit(sender, args[1]);
     }
